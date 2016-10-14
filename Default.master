@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="_Default" %>
+
+<%@ Register Src="~/Includes/header.ascx" TagPrefix="uc1" TagName="header" %>
+<%@ Register Src="~/Includes/Headerlinks.ascx" TagPrefix="uc1" TagName="Headerlinks" %>
+<%@ Register Src="~/Includes/Scriptlinks.ascx" TagPrefix="uc1" TagName="Scriptlinks" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>CraftGag</title>
+
+    <uc1:Headerlinks runat="server" ID="Headerlinks" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="scroll-assist" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)" data-reveal-timing="1000">
+  
+     <a id="top"></a>
+    <div class="loader"></div>
+    <uc1:header runat="server" ID="header" />
+    <form id="form1" runat="server">
+       <div class="main-container transition--fade">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 
+
+
+                     
+            </asp:ContentPlaceHolder>
+        </div>
+        <uc1:Scriptlinks runat="server" ID="Scriptlinks" />
+    </form>
+    
+</body>
+</html>
